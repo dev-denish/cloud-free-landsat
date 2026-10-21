@@ -6,6 +6,20 @@ It is packaged as a [Claude Code](https://claude.com/claude-code) **skill** plus
 
 It works with Landsat 4/5/7 (TM/ETM+) and 8/9 (OLI) USGS Collection-2 Level-2 products, as `.tar` bundles or as extracted folders.
 
+## Before / after
+
+Puttalam lagoon, Sri Lanka, Landsat 5, 2009. The test box is 30 × 20 km (UTM 44N, E 360–390 km, N 880–900 km). All panels use the same colour stretch.
+
+![Before and after, full test box](docs/img/before_after_puttalam_2009.jpg)
+
+- **Best single date** (30 Jan 2009, 84 % USGS-clear over the box): cumulus, cloud shadows and a haze plume.
+- **Original mosaic** (per-scene USGS mosaic before this method): date seams and hazy patches. The black area over the lagoon is no data in that mosaic.
+- **Cloud-free composite**: this method, 25 dates from Jan–Sep with Jan–Apr preferred. Every pixel is one real date, and none are empty.
+
+The zoomed panel is a 7.5 × 7.5 km window, picked as the land area where the original mosaic differs most from the result:
+
+![Before and after, zoom](docs/img/before_after_zoom.jpg)
+
 ## What it does
 
 1. **Per-date masks:**
